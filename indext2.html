@@ -2,19 +2,17 @@
 
 <head>
     <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
-    <link href="/css/main.css" rel="stylesheet">
-    <link href="/css/normalize.css" rel="stylesheet">
-    <link href="/css/skeleton.css" rel="stylesheet">
-    <link href="http://fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet"
-    type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet"type="text/css">
 </head>
 
 <body>
+<ul>
 	<script type="text/javascript">
 	var ws = new WebSocket("ws://localhost:80/");
-	<ul>ws.onmessage = function(msg){data = JSON.parse(msg.data); d3.select('ul').append('li').text(data.Visibility), d3.select('ul').append('li').text(data.Visibility).text(data.Name), d3.select('ul').append('li').text(data.Visibility).text(data.ReservationId),d3.select('ul').append('li').text(data.Visibility).text(data.VenueId)};
-	</ul>
-	</script>
+	ws.onmessage = function(msg){data = JSON.parse(msg.data); d3.select('ul').append('li').text(data.Visibility), d3.select('ul').append('li').text(data.Name), d3.select('ul').append('li').text(data.ReservationId),d3.select('ul').append('li').text(data.VenueId)};
+
+</script>
+</ul>
 </body>
 
 </html>
